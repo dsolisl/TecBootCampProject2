@@ -1,0 +1,826 @@
+[<div class="comp-telcel-mosaico-equipos" id="">
+ <ul>
+ <a class="equipo-nuevo-blank ng-hide" ng-show="devices.length&lt;1" style="min-height: 624px;"></a>
+ <!-- ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|1|0|Huawei|Nova 3|PAR-LX9|4277|Morado|128GB|70014315" id="4277" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/huawei/par-lx9.html?version=morado-128GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta promocion">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value">Promoción</span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/Huawei/PAR-LX9/imagenes/morado/bundle01.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/Huawei/PAR-LX9/imagenes/morado/bundle01.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Huawei | PAR-LX9</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Nova 3</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' --><div class="ng-scope" ng-if="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <p class="telcel-mosaico-equipos-desde">Desde <span class="ng-binding" ng-bind="device.precioLista|currency:2">$11,519.00</span></p>
+ <p class="telcel-mosaico-equipos-precio ng-binding">$10,999<span class="ng-binding" ng-bind="device.decimalesPromocion">.00</span></p>
+ </div><!-- end ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div class="ng-hide" ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$11,519<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $916<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.58</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Morado  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #6F44C8">
+ <div style="background-color: #6F44C8"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 128 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">128 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|2|0|RED|Hydrogen ONE|H1A1000|4309|Negro|128GB|70013603" id="4309" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/red/h1a1000.html?version=negro-128GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta promocion">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value">Promoción</span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/RED/H1A1000/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/RED/H1A1000/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">RED | H1A1000</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Hydrogen ONE</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' --><div class="ng-scope" ng-if="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <p class="telcel-mosaico-equipos-desde">Desde <span class="ng-binding" ng-bind="device.precioLista|currency:2">$27,999.00</span></p>
+ <p class="telcel-mosaico-equipos-precio ng-binding">$24,519<span class="ng-binding" ng-bind="device.decimalesPromocion">.00</span></p>
+ </div><!-- end ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div class="ng-hide" ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$27,999<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $2,043<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.25</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Negro  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #000316">
+ <div style="background-color: #000316"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 128 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">128 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|3|0|Motorola|MOTO G7 PLUS|XT1965-2|4347|Rojo|64GB|70014290" id="4347" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/motorola/xt1965-2.html?version=rojo-64GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta ">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value"></span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/motorola/XT1965-2/imagenes/rojo/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/motorola/XT1965-2/imagenes/rojo/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Motorola | XT1965-2</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">MOTO G7 PLUS</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$7,599<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $633<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.25</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Rojo  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #FF4500">
+ <div style="background-color: #FF4500"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 64 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">64 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|4|0|Motorola|MOTO G7 POWER|XT1955-2|4343|Azul|64GB|70014284" id="4343" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/motorola/xt1955-2.html?version=azul-64GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta ">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value"></span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/motorola/XT1955-2/imagenes/azul/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/motorola/XT1955-2/imagenes/azul/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Motorola | XT1955-2</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">MOTO G7 POWER</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$5,599<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $466<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.58</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Azul  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #5C96D6">
+ <div style="background-color: #5C96D6"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 64 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">64 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|5|0|Apple|iPhone 6|iPhone 6|3750|Gris Espacial|32GB|70011351" id="3750" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/apple/iphone-6.html?version=gris espacial-32GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta ">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value"></span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/Apple/iPhone_6/imagenes/Gris/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/Apple/iPhone_6/imagenes/Gris/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Apple | iPhone 6</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">iPhone 6</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$6,499<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $541<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.58</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Gris Espacial  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #7B7B7B">
+ <div style="background-color: #7B7B7B"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 32 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">32 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|6|0|Sony|Xperia L2|H3321|4189|Negro|32GB|70012868" id="4189" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/sony/h3321.html?version=negro-32GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta ">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value"></span></p>
+ <img alt="Sony Xperia L2 H3321 " class="" ng-src="/content/dam/telcelcom/dispositivos/Sony/H3321/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/Sony/H3321/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" title="Sony Xperia L2"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Sony | H3321</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Xperia L2</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$5,769<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $480<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.75</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Negro  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #000316">
+ <div style="background-color: #000316"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 32 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">32 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|7|0|Motorola|Moto E5|XT1944-3|4260|Dorado|16GB|70013085" id="4260" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/motorola/xt1944-3.html?version=dorado-16GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta ">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value"></span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/motorola/XT1944-3/imagenes/dorado/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/motorola/XT1944-3/imagenes/dorado/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Motorola | XT1944-3</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Moto E5</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$3,699<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $308<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.25</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Dorado  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #B99919">
+ <div style="background-color: #B99919"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 16 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">16 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|8|0|M4Tel|B3|B3|4232|Grafito|8GB|70013120" id="4232" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/m4tel/b3.html?version=grafito-8GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta promocion">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value">Promoción</span></p>
+ <img alt="M4 B3 " class="" ng-src="/content/dam/telcelcom/dispositivos/M4Tel/B3/imagenes/grafito/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/M4Tel/B3/imagenes/grafito/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" title="M4 B3 "/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">M4Tel | B3</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">B3</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' --><div class="ng-scope" ng-if="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <p class="telcel-mosaico-equipos-desde">Desde <span class="ng-binding" ng-bind="device.precioLista|currency:2">$2,689.00</span></p>
+ <p class="telcel-mosaico-equipos-precio ng-binding">$2,399<span class="ng-binding" ng-bind="device.decimalesPromocion">.00</span></p>
+ </div><!-- end ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div class="ng-hide" ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$2,689<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $199<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.91</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Grafito  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #383428">
+ <div style="background-color: #383428"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 8 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">8 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|9|0|M4Tel|Feel Plus|SS4458-R|4224|Azul|16GB|70012657" id="4224" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/m4tel/ss4458-r.html?version=azul-16GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta ">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value"></span></p>
+ <img alt="M4 Feel Plus SS4458-R" class="" ng-src="/content/dam/telcelcom/dispositivos/M4Tel/SS4458-R/imagenes/azul/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/M4Tel/SS4458-R/imagenes/azul/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" title="M4 Feel Plus"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">M4Tel | SS4458-R</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Feel Plus</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$3,149<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $262<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.41</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Azul  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #5C96D6">
+ <div style="background-color: #5C96D6"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 16 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">16 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|10|0|Huawei|P SMART 2019|POT-LX3|4339|Azul|32GB|70014324" id="4339" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/huawei/pot-lx3.html?version=azul-32GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta promocion">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value">Promoción</span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/Huawei/POT-LX3/imagenes/azul/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/Huawei/POT-LX3/imagenes/azul/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Huawei | POT-LX3</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">P SMART 2019</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' --><div class="ng-scope" ng-if="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <p class="telcel-mosaico-equipos-desde">Desde <span class="ng-binding" ng-bind="device.precioLista|currency:2">$5,269.00</span></p>
+ <p class="telcel-mosaico-equipos-precio ng-binding">$4,889<span class="ng-binding" ng-bind="device.decimalesPromocion">.01</span></p>
+ </div><!-- end ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div class="ng-hide" ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$5,269<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $407<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.41</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Azul  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #5C96D6">
+ <div style="background-color: #5C96D6"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 32 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">32 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|11|0|Samsung|Galaxy J2 Pro|SM-J250M|4211|Plata|16GB|70012852" id="4211" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/samsung/sm-j250m.html?version=plata-16GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta ">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value"></span></p>
+ <img alt="Samsung J2 Pro SM-J250M" class="" ng-src="/content/dam/telcelcom/dispositivos/Samsung/SM-J250M/imagenes/plata/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/Samsung/SM-J250M/imagenes/plata/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" title="Samsung J2 Pro"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Samsung | SM-J250M</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Galaxy J2 Pro</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$3,679<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $306<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.58</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Plata  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #CCCCCC">
+ <div style="background-color: #CCCCCC"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 16 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">16 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|12|0|LANIX|Ilium M9|Ilium M9|4265|Negro|16GB|70013646" id="4265" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/lanix/ilium-m9.html?version=negro-16GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta promocion">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value">Promoción</span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/lanix/M9/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/lanix/M9/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">LANIX | Ilium M9</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Ilium M9</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' --><div class="ng-scope" ng-if="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <p class="telcel-mosaico-equipos-desde">Desde <span class="ng-binding" ng-bind="device.precioLista|currency:2">$2,919.00</span></p>
+ <p class="telcel-mosaico-equipos-precio ng-binding">$2,699<span class="ng-binding" ng-bind="device.decimalesPromocion">.00</span></p>
+ </div><!-- end ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div class="ng-hide" ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$2,919<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $224<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.91</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Negro  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #000316">
+ <div style="background-color: #000316"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 16 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">16 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|13|0|Samsung|Galaxy J6|SM-J600G|4241|Negro|32GB|70013406" id="4241" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/samsung/sm-j600g.html?version=negro-32GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta promocion">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value">Promoción</span></p>
+ <img alt="Samsung  Galaxy J6" class="" ng-src="/content/dam/telcelcom/dispositivos/Samsung/SM-J600GZKMTCE/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/Samsung/SM-J600GZKMTCE/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" title="Samsung  Galaxy J6"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Samsung | SM-J600G</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Galaxy J6</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' --><div class="ng-scope" ng-if="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <p class="telcel-mosaico-equipos-desde">Desde <span class="ng-binding" ng-bind="device.precioLista|currency:2">$4,809.00</span></p>
+ <p class="telcel-mosaico-equipos-precio ng-binding">$3,999<span class="ng-binding" ng-bind="device.decimalesPromocion">.00</span></p>
+ </div><!-- end ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div class="ng-hide" ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$4,809<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $333<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.25</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Negro  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #000316">
+ <div style="background-color: #000316"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 32 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">32 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|14|0|Motorola|Moto G6 Plus|XT1926-6|4214|Azul|64GB|70013161" id="4214" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/motorola/xt1926-6.html?version=azul-64GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta promocion">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value">Promoción</span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/motorola/XT1926-6/imagenes/azul/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/motorola/XT1926-6/imagenes/azul/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Motorola | XT1926-6</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Moto G6 Plus</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' --><div class="ng-scope" ng-if="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <p class="telcel-mosaico-equipos-desde">Desde <span class="ng-binding" ng-bind="device.precioLista|currency:2">$7,629.00</span></p>
+ <p class="telcel-mosaico-equipos-precio ng-binding">$5,999<span class="ng-binding" ng-bind="device.decimalesPromocion">.00</span></p>
+ </div><!-- end ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div class="ng-hide" ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$7,629<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $499<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.91</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Azul  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #5C96D6">
+ <div style="background-color: #5C96D6"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 64 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">64 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices --><li class="ng-scope" ng-repeat="(index,device) in devices" on-finish-render="refreshDevice()">
+ <div class="telcel-mosaico-equipos-contenedor" data-evento="clicBanner" data-titulo="Equipos|Telefonos y Smartphones|15|0|Huawei|Mate 20 lite|SNE-LX3|4305|Negro|64GB|70013854" id="4305" ng-click="selectedDevice($event)" ng-value="device.urlCompra" value="https://www.telcel.com/personas/equipos/telefonos-y-smartphones/huawei/sne-lx3.html?version=negro-64GB">
+ <div class="telcel-mosaico-equipos-foto">
+ <p class="telcel-mosaico-equipos-etiqueta promocion">
+ <span class="ng-binding" ng-bind="device.labelSuperior.value">Promoción</span></p>
+ <img class="redefineImgAltAndTitle" ng-src="/content/dam/telcelcom/dispositivos/Huawei/SNE-LX3/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg" onload="RedefineImgAltAndTitle.process(this);" src="/content/dam/telcelcom/dispositivos/Huawei/SNE-LX3/imagenes/negro/frontal.jpg/jcr:content/renditions/cq5dam.web.90.160.jpeg"/>
+ <!-- ngIf: device.labelDerecha -->
+ <!-- ngIf: device.labelIzquierda -->
+ </div>
+ <div class="telcel-mosaico-equipos-detalle">
+ <div>
+ <p class="telcel-mosaico-equipos-marca ng-binding">Huawei | SNE-LX3</p>
+ <p class="telcel-mosaico-equipos-nombre-equipo ng-binding" ng-bind="device.nombreComercial">Mate 20 lite</p></div>
+ <!-- ngIf: device.labelSuperior.value == 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <!-- ngIf: device.labelSuperior.value == 'Promoción' --><div class="ng-scope" ng-if="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <p class="telcel-mosaico-equipos-desde">Desde <span class="ng-binding" ng-bind="device.precioLista|currency:2">$7,329.00</span></p>
+ <p class="telcel-mosaico-equipos-precio ng-binding">$6,999<span class="ng-binding" ng-bind="device.decimalesPromocion">.00</span></p>
+ </div><!-- end ngIf: device.labelSuperior.value == 'Promoción' -->
+ <div class="ng-hide" ng-hide="device.labelSuperior.value == 'Promoción'">
+ <!-- ngIf: subseccion != 'Accesorios' --><p class="telcel-mosaico-equipos-plan ng-scope" ng-if="subseccion != 'Accesorios'">Con Amigo Kit</p><!-- end ngIf: subseccion != 'Accesorios' -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-desde ng-scope" ng-if="device.precioLista">Desde</p><!-- end ngIf: device.precioLista -->
+ <!-- ngIf: device.precioLista --><p class="telcel-mosaico-equipos-precio ng-binding ng-scope" ng-if="device.precioLista">$7,329<!-- ngIf: device.precioLista --><span class="ng-binding ng-scope" ng-bind="device.decimalesprecioLista" ng-if="device.precioLista">.00</span><!-- end ngIf: device.precioLista --></p><!-- end ngIf: device.precioLista -->
+ </div>
+ <p class="telcel-mosaico-equipos-pagos" ng-style="{visibility: device.mensualidad ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <span class="ng-binding">12 pagos de $583<span class="ng-binding" ng-bind="device.decimalescostoMensualidad">.25</span>
+ </span></p>
+ <div class="telcel-mosaico-equipos-color-capacidad">
+ <!-- ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Color: Negro  &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' --><span class="telcel-mosaico-equipos-color-circulo ng-scope" ng-if="attribute.identifier == 'Color'" style="border: solid 1px #000316">
+ <div style="background-color: #000316"></div>
+ </span><!-- end ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes --><a class="seleccion-de-equipos-capacidad ng-scope" data-html="true" data-original-title="Capacidad: 64 GB &lt;br&gt; Ver más" data-placement="bottom" data-toggle="tooltip" ng-repeat="attribute in device.attributes" title="">
+ <!-- ngIf: attribute.identifier == 'Color' -->
+ <!-- ngIf: attribute.identifier != 'Color' --><span class="telcel-mosaico-equipos-capacidad-numero ng-binding ng-scope" ng-if="attribute.identifier != 'Color'">64 GB</span><!-- end ngIf: attribute.identifier != 'Color' -->
+ <span class="telcel-mosaico-equipos-mas">+</span>
+ </a><!-- end ngRepeat: attribute in device.attributes -->
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ <!-- ngIf: device.labelSuperior.value != 'Próximamente' --><div class="telcel-mosaico-equipos-envio-regalo ng-scope" ng-if="device.labelSuperior.value != 'Próximamente'">
+ <div class="telcel-mosaico-equipos-envio" ng-style="{visibility: device.precioEnvio == null ? 'visible' : 'hidden'}" style="visibility: visible;">
+ <img alt="" src="/content/dam/telcelcom/iconos/envio-gratis.png"/>
+ <p>Envío Gratis</p>
+ </div>
+ <div class="telcel-mosaico-equipos-regalo" ng-style="{visibility: (device.bundle == null || device.bundle == '') ? 'hidden' : 'visible'}" style="visibility: hidden;">
+ <img alt="" src="/content/dam/telcelcom/iconos/incluye-regalo.png"/>
+ <p>Incluye regalo</p>
+ </div>
+ </div><!-- end ngIf: device.labelSuperior.value != 'Próximamente' -->
+ </div>
+ </div>
+ </li><!-- end ngRepeat: (index,device) in devices -->
+ </ul>
+ <div aria-label="P&amp;aacuteginas de resultados" class="telcel-mosaico-equipos-footer col-xs-12">
+ <div class="telcel-mosaico-equipos-footer-leyenda">
+ <!--                     <p>Los precios incluyen IVA al 16%</p> -->
+ </div>
+ <div class="telcel-mosaico-equipos-footer-paginador">
+ <ul>
+ <!-- ngRepeat: page in paginator --><li class="ng-scope" ng-repeat="page in paginator">
+ <a aria-label="Página anterior" class="ng-binding disabled" href="#" ng-class="page.class" ng-click="selectedPage($event)" ng-value="page.value" value="0">
+                                     «
+                             </a>
+ </li><!-- end ngRepeat: page in paginator --><li class="ng-scope" ng-repeat="page in paginator">
+ <a aria-label="Página 1" class="ng-binding active" href="#" ng-class="page.class" ng-click="selectedPage($event)" ng-value="page.value" value="1">
+                                     1
+                             </a>
+ </li><!-- end ngRepeat: page in paginator --><li class="ng-scope" ng-repeat="page in paginator">
+ <a aria-label="Página 2" class="ng-binding" href="#" ng-class="page.class" ng-click="selectedPage($event)" ng-value="page.value" value="2">
+                                     2
+                             </a>
+ </li><!-- end ngRepeat: page in paginator --><li class="ng-scope" ng-repeat="page in paginator">
+ <a aria-label="Página 3" class="ng-binding" href="#" ng-class="page.class" ng-click="selectedPage($event)" ng-value="page.value" value="3">
+                                     3
+                             </a>
+ </li><!-- end ngRepeat: page in paginator --><li class="ng-scope" ng-repeat="page in paginator">
+ <a aria-label="Página 4" class="ng-binding" href="#" ng-class="page.class" ng-click="selectedPage($event)" ng-value="page.value" value="4">
+                                     4
+                             </a>
+ </li><!-- end ngRepeat: page in paginator --><li class="ng-scope" ng-repeat="page in paginator">
+ <a aria-label="Página 5" class="ng-binding" href="#" ng-class="page.class" ng-click="selectedPage($event)" ng-value="page.value" value="5">
+                                     5
+                             </a>
+ </li><!-- end ngRepeat: page in paginator --><li class="ng-scope" ng-repeat="page in paginator">
+ <a aria-label="Página siguiente" class="ng-binding" href="#" ng-class="page.class" ng-click="selectedPage($event)" ng-value="page.value" value="2">
+                                     »
+                             </a>
+ </li><!-- end ngRepeat: page in paginator -->
+ </ul>
+ </div>
+ </div>
+ </div>]
